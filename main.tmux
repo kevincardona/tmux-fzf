@@ -8,3 +8,6 @@ fi
 
 [ -z "$TMUX_FZF_LAUNCH_KEY" ] && TMUX_FZF_LAUNCH_KEY="F"
 tmux bind-key "$TMUX_FZF_LAUNCH_KEY" run-shell -b "$CURRENT_DIR/main.sh"
+
+[ -z "$TMUX_FZF_PANE_LAUNCH_KEY" ] && TMUX_FZF_PANE_LAUNCH_KEY="f"
+tmux bind-key "$TMUX_FZF_PANE_LAUNCH_KEY" run-shell -b "$CURRENT_DIR/scripts/pane.sh switch"
